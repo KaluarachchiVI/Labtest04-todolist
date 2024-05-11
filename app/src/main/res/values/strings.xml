@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">lab test 4(to-do list)</string>
+    <string name="enter_task_name">Enter task name</string>
+    <string name="add_task">Add Task</string>
+</resources>
