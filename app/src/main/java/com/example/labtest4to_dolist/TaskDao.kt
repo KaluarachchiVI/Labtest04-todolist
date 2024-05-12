@@ -27,4 +27,8 @@ interface TaskDao {
 
     @Query("SELECT * FROM tasks WHERE (:priority = '' OR priority = :priority)")
     fun getTasksByPriority(priority: String): LiveData<List<Task>>
+
+    @Query("SELECT * FROM tasks WHERE name LIKE '%' || :query || '%' ORDER BY id ASC")
+    fun searchTasks(query: String): LiveData<List<Task>>
+
 }

@@ -49,6 +49,16 @@ class TaskAdapter(
         notifyDataSetChanged() // Notify RecyclerView of data change
     }
 
+    fun searchTasks(query: String) {
+        filteredTasks = if (query.isBlank()) {
+            tasks // Return all tasks when the query is blank
+        } else {
+            tasks.filter { it.name.contains(query, ignoreCase = true) } // Filter tasks by name
+        }
+        notifyDataSetChanged() // Notify RecyclerView of data change
+    }
+
+
 
 
     inner class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

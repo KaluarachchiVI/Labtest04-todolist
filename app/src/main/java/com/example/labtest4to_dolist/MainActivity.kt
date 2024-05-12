@@ -103,13 +103,15 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                adapter.filterTasks(s.toString())
+                adapter.searchTasks(s.toString())
             }
 
             override fun afterTextChanged(s: Editable?) {
                 // Not used
             }
         })
+
+
     }
 
     private fun showPriorityDialog() {
