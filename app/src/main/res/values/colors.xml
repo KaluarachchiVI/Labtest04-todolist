@@ -14,6 +14,7 @@
     <color name="red">#FFB3AE</color>
     <color name="blue">#A3C0FB</color>
     <color name="green">#B3FFA5</color>
+    <color name="back">#A3F0FA</color>
 
     <!-- Define custom task colors -->
     <array name="task_colors">
